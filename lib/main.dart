@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'createaccount.dart';
-import 'slidescreen01.dart';
-import 'slidescreen02.dart';
-import 'slidescreen03.dart';
-import 'welcomeScreen.dart';
+import 'verification.dart';
+import 'verificationcode.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +12,7 @@ void main() {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CreateAccount(),
+      home: Verificationcode(),
     );
   }
 }
