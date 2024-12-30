@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'verification.dart';
+
 class Verificationcode extends StatelessWidget {
   const Verificationcode({super.key});
 
@@ -34,9 +36,9 @@ class Verificationcode extends StatelessWidget {
                 child: Text(
                   "Please enter the 6-digit code sent to your email hemmyhtec@gmail.com for verification.",
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 16,
                     color: Colors.white,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w300,
                   ),
                 ),
               ),
@@ -91,25 +93,56 @@ class Verificationcode extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 60,),
+              SizedBox(
+                height: 60,
+              ),
 
               //Design the Verify Button
-              Container(
-                height: 50,
-                width: 280,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Color(0xFF6C63FF),
-                ),
-                child: Center(
-                  child: Text(
-                    "VERIFY",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
+              GestureDetector(
+                onTap: () {
+                  // Navigate to the verification page
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Verification()),
+                  );
+                },
+                child: Container(
+                  height: 50,
+                  width: 280,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Color(0xFF6C63FF),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "VERIFY",
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
+                ),
+              ),
+
+              SizedBox(
+                height: 55,
+              ),
+              Text(
+                "Didn't receive any code? Resend Again",
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "Request new code in 00:30s",
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w300,
                 ),
               ),
             ],

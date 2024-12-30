@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_register_ui/createaccount.dart';
 import 'verification.dart';
 import 'verificationcode.dart';
 
@@ -12,7 +13,7 @@ void main() {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Verificationcode(),
+      home: CreateAccount(),
     );
   }
 }

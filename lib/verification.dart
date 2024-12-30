@@ -44,7 +44,7 @@ class Verification extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 14,
                     color: Colors.white,
-                    fontWeight: FontWeight.w900,
+                    fontWeight: FontWeight.w300,
                   ),
                 ),
               )
