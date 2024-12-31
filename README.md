@@ -18,12 +18,11 @@ Explora is a Flutter-based application designed to provide a seamless and visual
   - Welcome message after successful verification.
 ---
 
-
 ## Project Screenshots
 
 | **Welcome Screen** | **Onboarding Screens** | **Create Account** | **OTP Verification** |
 |---------------------|-------------------------|---------------------|-----------------------|
-| ![Welcome Screen](./assets/screenshots/welcome.png) | ![Onboarding](./assets/screenshots/onboarding.png) | ![Create Account](./assets/screenshots/create_account.png) | ![Verification](./assets/screenshots/verification.png) |
+| <img src="https://github.com/user-attachments/assets/81aff3df-3b50-493a-8bea-ac462ec740a8" alt="Welcome Screen" width="200"/> | <img src="https://github.com/user-attachments/assets/31cdcf30-52b1-42bf-b973-b53708e91810" alt="Onboarding" width="200"/> | <img src="https://github.com/user-attachments/assets/aac157fc-04ca-413e-9620-1aed1b16375b" alt="Create Account" width="200"/> | <img src="https://github.com/user-attachments/assets/3a2ca70d-095c-47a8-b0f5-2b8ed734bc93" alt="Verification" width="200"/> |
 
 ---
 
@@ -39,4 +38,4 @@ To run this project, ensure you have the following installed:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/basuru07/explora_ui.git
+   git clone https://github.com/basuru07/Login-Register-UI-Design.git
