@@ -55,7 +55,7 @@ class Slidescreen01 extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 24,
                     color: Colors.white,
-                    fontWeight: FontWeight.normal,
+                    fontWeight: FontWeight.w300,
                   ),
                 ),
               ),

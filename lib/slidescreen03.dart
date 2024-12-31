@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_register_ui/createaccount.dart';
 
 class Slidescreen03 extends StatelessWidget {
   const Slidescreen03({super.key});
@@ -54,7 +55,7 @@ class Slidescreen03 extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 24,
                     color: Colors.white,
-                    fontWeight: FontWeight.normal,
+                    fontWeight: FontWeight.w300,
                   ),
                 ),
               ),
@@ -93,7 +94,13 @@ class Slidescreen03 extends StatelessWidget {
                   ),
                   Spacer(),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CreateAccount()),
+                      );
+                    },
                     icon: Icon(Icons.skip_next),
                     color: Colors.white, // Optional, for better contrast
                   ),

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:login_register_ui/createaccount02.dart';
+import 'package:login_register_ui/createaccount.dart';
 import 'package:login_register_ui/verification.dart';
+import 'package:login_register_ui/verificationcode.dart';
 
-class CreateAccount extends StatelessWidget {
-  const CreateAccount({super.key});
+class CreateAccount02 extends StatelessWidget {
+  const CreateAccount02({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class CreateAccount extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Welcome Back",
+                    "Get Started",
                     style: TextStyle(
                       fontSize: 29,
                       color: Colors.white,
@@ -33,7 +34,7 @@ class CreateAccount extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "sign in to access your account",
+                    "by creating a free account",
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.white,
@@ -41,11 +42,31 @@ class CreateAccount extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 30),
-                  // Email text field
+
+                  // Full name text field
                   TextField(
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      labelText: "Enter your email",
+                      labelText: "Full name",
+                      labelStyle: TextStyle(color: Colors.white),
+                      filled: true,
+                      fillColor: Colors.grey[800],
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: BorderSide.none,
+                      ),
+                      suffixIcon: Icon(
+                        Icons.person, // Replace with the desired icon
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 16),
+
+                  TextField(
+                    style: TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                      labelText: "Valid email",
                       labelStyle: TextStyle(color: Colors.white),
                       filled: true,
                       fillColor: Colors.grey[800],
@@ -60,12 +81,32 @@ class CreateAccount extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16),
+
+                  TextField(
+                    style: TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                      labelText: "Phone number",
+                      labelStyle: TextStyle(color: Colors.white),
+                      filled: true,
+                      fillColor: Colors.grey[800],
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: BorderSide.none,
+                      ),
+                      suffixIcon: Icon(
+                        Icons.smartphone_sharp, // Replace with the desired icon
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 16),
+
                   // Password text field
                   TextField(
                     obscureText: true,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      labelText: "Enter your password",
+                      labelText: "Strong password",
                       labelStyle: TextStyle(color: Colors.white),
                       filled: true,
                       fillColor: Colors.grey[800],
@@ -87,25 +128,53 @@ class CreateAccount extends StatelessWidget {
                         activeColor: Colors.blue, // Color when checked
                         checkColor: Colors.white, // Color of the checkmark
                       ),
-                      Text(
-                        "Remember me",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w300,
-                        ),
-                      ),
-                      Spacer(), // This pushes the "Forget Password?" to the right
-                      Text(
-                        "Forget Password?",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Color(0xFF6C63FF),
-                          fontWeight: FontWeight.w300,
+                      Flexible(
+                        child: RichText(
+                          text: TextSpan(
+                            text: "By checking the box you agree to our ",
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w300,
+                            ),
+                            children: [
+                              TextSpan(
+                                text: "Terms",
+                                style: TextStyle(
+                                  color: Color(0xFF6C63FF), // Highlighted color
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              TextSpan(
+                                text: " and ",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w300,
+                                ),
+                              ),
+                              TextSpan(
+                                text: "Conditions",
+                                style: TextStyle(
+                                  color: Color(0xFF6C63FF), // Highlighted color
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              TextSpan(
+                                text: ".",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w300,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
                   ),
+
                   SizedBox(
                     height: 70,
                   ),
@@ -115,7 +184,7 @@ class CreateAccount extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              Verification(), // Replace `NextPage` with your target page widget
+                              Verificationcode(), // Replace `NextPage` with your target page widget
                         ),
                       );
                     },
@@ -145,7 +214,7 @@ class CreateAccount extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "New Member?",
+                        "Already a member?",
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.white,
@@ -161,12 +230,12 @@ class CreateAccount extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  CreateAccount02(), // Replace with your target page
+                                  CreateAccount(), // Replace with your target page
                             ),
                           );
                         },
                         child: Text(
-                          "Register now",
+                          "Log In",
                           style: TextStyle(
                             fontSize: 14,
                             color: Color(0xFF6C63FF),
