@@ -34,6 +34,10 @@ To run this project, ensure you have the following installed:
 - A compatible IDE such as [VS Code](https://code.visualstudio.com/) or [Android Studio](https://developer.android.com/studio).
 - Dart version 2.12 or higher.
 
+Project UI Interfaces
+  
+   [Login Register UI Design (Community)](https://www.figma.com/design/KoEEGkVVMBGEMCLXgrtUa0/Login-Register-UI-Design-(Community)?node-id=0-1&p=f&t=a3SQla9ujL5NYdb8-0).
+
 ### Installation
 
 1. Clone this repository:
